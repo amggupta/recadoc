@@ -1,0 +1,35 @@
+<section data-ng-controller="DoctorsController" data-ng-init="findOne()">
+	<form class="form-horizontal" data-ng-submit="update()">
+		<div class="control-group">
+			<label class="control-label" for="name">Name</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="doctor.name" id="name" placeholder="Name" required>
+				</input>
+			</div>
+			<label class="control-label" for="city">City</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="doctor.city" id="city" placeholder="City" required>
+				</input>
+			</div>
+			<label class="control-label" for="speciality">Speciality</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="doctor.speciality" id="speciality" placeholder="speciality" required>
+				</input>
+			</div>
+			<label class="control-label" for="hospital">Hospital</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="doctor.hospital" id="hospital" placeholder="Hospital" required>
+				</input>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</section>

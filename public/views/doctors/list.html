@@ -1,0 +1,14 @@
+<section data-ng-controller="DoctorsController" data-ng-init="find()">
+	<ul class="doctors unstyled">
+		<li data-ng-repeat="doctor in doctors">
+			<span>{{doctor.created | date:'medium'}}</span> /
+			<span>{{doctor.user.name}}</span>
+			<h2><a data-ng-href="#!/doctors/{{doctor._id}}">{{doctor.name}}</a> </h2>
+			<a data-ng-href="#!/articles/create?docID={{doctor._id}}">Add Comment</button> </a>
+			<div>{{doctor.city}}</div>
+			<div>{{doctor.speciality}}</div>
+			<div>{{doctor.hospital}}</div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!doctors || doctors.length">No doctors yet. <br> Why don't you <a href="/#!/doctors/create">Create One</a>?</h1>
+</section>

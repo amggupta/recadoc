@@ -1,0 +1,27 @@
+<section data-ng-controller="DoctorsController">
+	<form class="form-horizontal" data-ng-submit="create()">
+		<div class="control-group">
+			<label class="control-label" for="name">Name</label>
+			<div class="controls">
+				<input type="text" data-ng-model="name" id="name" placeholder="name" required>
+			</div>
+			<label class="control-label" for="city">City</label>
+			<div class="controls">
+				<input type="text" data-ng-model="city" id="city" placeholder="city" required>
+			</div>
+			<label class="control-label" for="speciality">Speciality</label>
+			<div class="controls">
+				<input type="text" data-ng-model="speciality" id="speciality" placeholder="speciality" required>
+			</div>
+			<label class="control-label" for="hospital">Hospital</label>
+			<div class="controls">
+				<input type="text" data-ng-model="hospital" id="hospital" placeholder="hospital" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</section>

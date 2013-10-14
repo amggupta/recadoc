@@ -1,0 +1,10 @@
+h1 {
+    text-align:center
+}
+
+h3 {
+	color:red;
+}
+ul.articles li:not(:last-child) {
+    border:1px solid #ccc
+}
