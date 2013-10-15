@@ -28,9 +28,9 @@ var ArticleSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User'
     },
-    docID:{
+    doctor:{
         type: Schema.ObjectId,
-        ref: 'doctor'
+        ref: 'Doctor'
     }
 });
 
@@ -48,7 +48,7 @@ ArticleSchema.statics = {
     load: function(id, cb) {
         this.findOne({
             _id: id
-        }).populate('user', 'name username').exec(cb);
+        }).populate('doctor', 'name').populate('user', 'name username').exec(cb);
     }
 };
 

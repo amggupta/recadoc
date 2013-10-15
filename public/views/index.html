@@ -1,3 +1,23 @@
-<section data-ng-controller="IndexController">
-	<h1>This is the home view</h1>
-</section>
+<div class="doctor_list" data-ng-controller="DoctorsController" data-ng-init="find()">
+	<ul class="doctors unstyled">
+		<li data-ng-repeat="doctor in doctors">
+			<h3><a data-ng-href="#!/doctors/{{doctor._id}}">{{doctor.name}}</a> </h3>
+			<a data-ng-href="#!/articles/create?docID={{doctor._id}}">Add Comment</button> </a>
+			<h4>{{doctor.speciality}}</h4>
+			<div>{{doctor.city}}</div>
+			<div>{{doctor.hospital}}</div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!doctors || doctors.length">No doctors yet. <br> Why don't you <a href="/#!/doctors/create">Create One</a>?</h1>
+</div>
+<div class="article_list" data-ng-controller="ArticlesController" data-ng-init="find()">
+	<ul class="articles unstyled">
+		<li data-ng-repeat="article in articles">
+			<h4><a data-ng-href="#!/articles/{{article._id}}">{{article.title}}</a></h4>
+			<span>{{article.created | date:'medium'}}</span> /
+			<span>by {{article.user.name}} for <a href="/#!/doctors/{{article.doctor._id}}">Dr. {{article.doctor.name}}</a></span>
+			<div>{{article.content}}</div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!articles || articles.length">No articles yet. <br> Why don't you <a href="/#!/articles/create">Create One</a>?</h1>
+</div>

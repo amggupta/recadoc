@@ -89,7 +89,7 @@ exports.show = function(req, res) {
 
 exports.find_for_doc = function(req, res){
     console.log('find_for_doc reached.')
-    Article.find({'docID': req.docID }).sort('-created').populate('user', 'name username').exec(function(err, articles) {
+    Article.find({'doctor': req.docID }).sort('-created').populate('user', 'name username').exec(function(err, articles) {
         if (err) {
             res.render('error', {
                 status: 500
@@ -105,7 +105,7 @@ exports.find_for_doc = function(req, res){
  * List of Articles
  */
 exports.all = function(req, res) {
-    Article.find().sort('-created').populate('user', 'name username').exec(function(err, articles) {
+    Article.find().sort('-created').populate('user', 'name username').populate('doctor', 'name').exec(function(err, articles) {
         if (err) {
             res.render('error', {
                 status: 500

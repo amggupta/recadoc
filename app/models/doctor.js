@@ -15,28 +15,31 @@ var DoctorSchema = new Schema({
         default: Date.now
     },
     name: {
-        type: String,
-        default: '',
-        trim: true
+        type: String, default: '',trim: true
+    },
+    title:{
+        type: String, default:'', trim: true
     },
     city: {
-        type: String,
-        default: '',
-        trim: true
+        type: String, default:'', trim: true
     },
     speciality:{
-        type: String,
-        default: '',
-        trim: true
+        type: String, default:'', trim: true
     },
     hospital:{
-        type: String,
-        default: '',
-        trim: true
+        type: String, default:'', trim: true
+    },
+    hospital_address:{
+        type: String, default:'', trim: true
+    },
+    clinic_address:{
+        type: String, default:'', trim: true
+    },
+    phone_number:{
+        type: String, default:'', trim: true
     },
     user: {
-        type: Schema.ObjectId,
-        ref: 'User'
+        type: Schema.ObjectId, ref: 'User'
     }
 });
 

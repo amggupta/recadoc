@@ -5,6 +5,32 @@ h1 {
 h3 {
 	color:red;
 }
-ul.articles li:not(:last-child) {
-    border:1px solid #ccc
+
+body
+{
+background-color:white;
 }
+.article_list{
+	background-color:white;
+    width: 55%;
+    float: right;
+}
+
+.doctor_list{
+	background-color:white;
+	width: 40%;
+	float: left;
+}
+
+ul.articles li {
+    margin-top:25px;
+	outline:1px solid #ccc;
+	outline-offset:10px;
+}
+
+ul.doctors li {
+    margin-top:25px;
+	outline:1px solid #ccc;
+	outline-offset:10px;
+}
+

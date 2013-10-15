@@ -5,7 +5,7 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
         var article = new Articles({
             title: this.title,
             content: this.content,
-            docID: $location.search()['docID']
+            doctor: $location.search()['docID']
         });
        console.log('create handler at article controller');
        console.log($location.search()['docID']);

@@ -14,6 +14,12 @@ angular.module('mean.doctors').controller('DoctorsController', ['$scope', '$rout
 
         this.name = "";
         this.city = "";
+        this.title= "";
+        this.speciality = "";
+        this.hospital = "";
+        this.hospital_address = "";
+        this.clinic_address = "";
+        this.phone_number = "";
     };
 
     $scope.remove = function(doctor) {
