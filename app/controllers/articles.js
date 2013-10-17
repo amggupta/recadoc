@@ -6,6 +6,7 @@ var mongoose = require('mongoose'),
     Article = mongoose.model('Article'),
     _ = require('underscore');
 
+var geo_ip = require('geoip-lite');
 
 /**
  * Find article by id
