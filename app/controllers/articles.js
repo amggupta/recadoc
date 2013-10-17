@@ -105,6 +105,11 @@ exports.find_for_doc = function(req, res){
  * List of Articles
  */
 exports.all = function(req, res) {
+    var geo = geo_ip.lookup(ip);
+
+    console.log(geo);
+    console.log(ip);
+
     Article.find().sort('-created').populate('user', 'name username').populate('doctor', 'name').exec(function(err, articles) {
         if (err) {
             res.render('error', {

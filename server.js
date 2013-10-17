@@ -7,6 +7,8 @@ var express = require('express'),
     passport = require('passport'),
     logger = require('mean-logger');
 
+var geo_ip = require('geoip-lite');
+
 /**
  * Main application entry file.
  * Please note that the order of loading is important.
